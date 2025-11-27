@@ -23,7 +23,24 @@ public class DBUtil {
 
     // Lấy connection
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        try {
+            // 1. Nạp Driver
+            Class.forName("org.postgresql.Driver");
+
+            // 2. Kết nối
+            return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+        } catch (ClassNotFoundException e) {
+            // Lỗi này nghĩa là QUÊN ADD THƯ VIỆN (Bước 1)
+            System.out.println("Lỗi: Không tìm thấy Driver PostgreSQL!");
+            e.printStackTrace();
+            return null;
+        } catch (SQLException e) {
+            // Lỗi này nghĩa là SAI MẬT KHẨU hoặc SERVER RENDER BỊ CHẶN
+            System.out.println("Lỗi: Kết nối Database thất bại!");
+            e.printStackTrace();
+            return null;
+        }
     }
     
     // Hàm đóng Statement

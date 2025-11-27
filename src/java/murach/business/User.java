@@ -20,6 +20,15 @@ public class User implements Serializable {
      
     }
     
+    public User(String firstName,String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+     
+    }
+    
+  
+    
     // Constructor đầy đủ (Bạn có thể bỏ qua nếu chỉ dùng constructor mặc định và setters)
     // Tôi chỉ liệt kê các getters/setters cho mục đích này
 

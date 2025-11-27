@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/ch_12">
-        <Resource name="jdbc/murach" auth="Container" 
-        driverClassName="org.postgresql.Driver" 
-        url="jdbc:postgresql://dpg-d4jtr1chg0os73abi7r0-a.oregon-postgres.render.com:5432/ch_12" 
-        username="murach_user" password="sesame" 
-        maxActive="100" maxIdle="30" maxWait="10000" 
-        logAbandoned="true" removeAbandoned="true" 
-        removeAbandonedTimeout="60" type="javax.sql.DataSource" />
-
+    <Resource name="jdbc/murach" 
+              auth="Container" 
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver" 
+              url="jdbc:postgresql://dpg-d4jtr1chg0os73abi7r0-a.oregon-postgres.render.com:5432/ch_12" 
+              username="ch_12_user" 
+              password="wPNeFDYqvB3eRK6Y6xXYoVT7hmFZtT1K" 
+              maxTotal="100" 
+              maxIdle="30" 
+              maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true" 
+              removeAbandonedTimeout="60"
+              logAbandoned="true" />
 </Context>

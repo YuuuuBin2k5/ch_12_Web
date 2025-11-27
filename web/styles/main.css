@@ -95,3 +95,22 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+/* CSS đơn giản cho menu */
+.menu-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+.menu-box a {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.menu-box a:hover {
+    color: blue;
+}
