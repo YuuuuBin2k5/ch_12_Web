@@ -111,7 +111,7 @@ public class UserDB {
         }
 
         // Sửa tên bảng thành "Users"
-        String query = "SELECT Email FROM users WHERE Email = ?";
+        String query = "SELECT Email FROM \"users\" WHERE Email = ?";
         try {
             ps = connection.prepareStatement(query);
             ps.setString(1, email);
